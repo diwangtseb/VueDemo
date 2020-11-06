@@ -30,5 +30,10 @@ export default new VueRouter({
         name: 'ConfirmPay',
         component: () => import('@/components/ConfirmPay'),
       },
+      {
+        path:'/Bmi',
+        name:'Bmi',
+        component:()=>import('@/components/Bmi')
+      }
    ]
 })

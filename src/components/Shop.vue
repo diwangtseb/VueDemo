@@ -32,8 +32,6 @@
         </el-table-column>
       </el-table>
       <el-button @click="confirmBuy">确认购买</el-button>
-      <el-button @click="ShowQRCode">二维码</el-button>
-      <div id="qrcode" v-show="show"></div>
     </div>
   </div>
 </template>
@@ -62,12 +60,8 @@ export default {
       this.multipleSelection.forEach((item) => {
         sumPrice += item.price;
       });
+      this.$store.dispatch('SwithMoneyAction',sumPrice)
       this.$router.push('ConfirmPay')
-    },
-    ShowQRCode() {
-      this.show = !this.show;
-      document.getElementById("qrcode").innerHTML = "";
-      this.qrcode = this.$QRCode("奖励你一套五十年高考三十年模拟");
     },
   },
   created() {
