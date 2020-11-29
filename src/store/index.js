@@ -16,6 +16,9 @@ export default new Vuex.Store({
     },
     SwithMoney(state,payMoney){
       state.payMoney=payMoney
+    },
+    UpdateLoginState(state,isLogin){
+      state.isLogin=isLogin
     }
   },
   actions: {

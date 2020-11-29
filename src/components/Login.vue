@@ -35,6 +35,8 @@ export default {
         method: 'POST',
         data:this.User
       }).then(res=>{
+          //this.$store.commit('UpdateLoginState',true)   
+          sessionStorage.setItem("isLogin",true)
           this.$router.push('/HomePage')
       })
     },
