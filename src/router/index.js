@@ -34,6 +34,16 @@ export default new VueRouter({
         path:'/Bmi',
         name:'Bmi',
         component:()=>import('@/components/Bmi')
+      },
+      {
+        path: '/Mycomponent',
+        name: 'Mycomponent',
+        component: () => import('@/components/Mycomponent'),
+      },
+      {
+        path: '/MycomponentSon',
+        name: 'MycomponentSon',
+        component: () => import('@/components/MycomponentSon'),
       }
    ]
 })
